@@ -20,20 +20,20 @@ public class Bank {
     
     public void createAccount(){
         String accountnumber=readAccountNum("Enter Account Number :");
-        ValidationUtil result=ValidationUtil.ValidationLogic(accountnumber);    //Validation1
+        ValidationUtil result=ValidationUtil.ValidationLogic(accountnumber);    // Validational Check
         if(!result.isValid()){  // Runs when validation fail
             System.out.println(result.getMessage());
             return;
         }
     if(! ValidationUtil.uniqueAccountNo(accountnumber,list)){
-        System.out.println("This Already Exists, Account no Should be Unique always");    //Validation2
+        System.out.println("This Already Exists, Account no Should be Unique always");    
         return;
        }
 
        System.out.println("Enter Account holder Name :");
        String holdername=scanner.nextLine();
        if(!ValidationUtil.isHolderNameValid(holdername)){
-            System.out.println("Invalid Input, Please enter a valid Name"); //validation
+            System.out.println("Invalid Input, Please enter a valid Name"); 
             return;
        }
 
@@ -48,7 +48,7 @@ public class Bank {
         return;
        }
        if(!ValidationUtil.isHolderAgeValid(holderage)){
-        System.out.println("Age can't be 0 or negative");       //validation
+        System.out.println("Age can't be 0 or negative");      
         return;
        }
 
@@ -63,7 +63,7 @@ public class Bank {
             return;
         }
         if(!ValidationUtil.isHolderBalanceValid(holderbalance)){
-        System.out.println("Balance can't be negative");       //validation
+        System.out.println("Balance can't be negative");       
         return;
        }
 
@@ -94,7 +94,7 @@ public class Bank {
         }
 
         String accountnumber=readAccountNum("Enter Account Number :");
-        ValidationUtil result=ValidationUtil.ValidationLogic(accountnumber);    //Validation
+        ValidationUtil result=ValidationUtil.ValidationLogic(accountnumber);    
         if(!result.isValid()){  // Runs when validation fail
             System.out.println(result.getMessage());
             return;
@@ -118,7 +118,7 @@ public class Bank {
         }
     
         String accountnumber=readAccountNum("Enter Account Number :");
-        ValidationUtil result=ValidationUtil.ValidationLogic(accountnumber);    //Validation1
+        ValidationUtil result=ValidationUtil.ValidationLogic(accountnumber);    /
         if(!result.isValid()){  // Runs when validation fail
             System.out.println(result.getMessage());
             return;
@@ -142,7 +142,7 @@ public class Bank {
                 return;
             }
             if(!ValidationUtil.isHolderBalanceValid(amount)){  // IK Should Use Balance in message but i played little to avoid write another method to validate +,- 
-            System.out.println("Amount can't be negative");       //validation
+            System.out.println("Amount can't be negative");       
             return;
             }
             isExist.setBalance(isExist.getBalance()+amount);
@@ -163,7 +163,7 @@ public class Bank {
         }
 
          String accountnumber=readAccountNum("Enter Account Number :");
-        ValidationUtil result=ValidationUtil.ValidationLogic(accountnumber);    //Validation1
+        ValidationUtil result=ValidationUtil.ValidationLogic(accountnumber);    
         if(!result.isValid()){  // Runs when validation fail
             System.out.println(result.getMessage());
             return;
@@ -191,7 +191,7 @@ public class Bank {
                 return;
             }
             if(!ValidationUtil.isHolderBalanceValid(amount)){
-            System.out.println("Amount can't be negative");       //validation
+            System.out.println("Amount can't be negative");       
             return;
             } 
             // Checking Does this Account has Sufficient Balance to Withdraw
@@ -224,7 +224,7 @@ public class Bank {
             }
         
         String senderaccountnumber=readAccountNum("Enter Sender's Account Number :");
-        ValidationUtil senderresult=ValidationUtil.ValidationLogic(senderaccountnumber);    //Validation1
+        ValidationUtil senderresult=ValidationUtil.ValidationLogic(senderaccountnumber);    
         if(!senderresult.isValid()){  // Runs when validation fail
             System.out.println(senderresult.getMessage());
             return;
@@ -239,7 +239,7 @@ public class Bank {
                         }
                
                 String receiveraccountnumber=readAccountNum("Enter Receiver's Account Number :");
-                ValidationUtil receiverresult=ValidationUtil.ValidationLogic(receiveraccountnumber);    //Validation1
+                ValidationUtil receiverresult=ValidationUtil.ValidationLogic(receiveraccountnumber);    
                 if(!receiverresult.isValid()){  // Runs when validation fail
                     System.out.println(receiverresult.getMessage());
                     return;
@@ -267,7 +267,7 @@ public class Bank {
                             return;
                         }
                         if(!ValidationUtil.isHolderBalanceValid(amount)){
-                        System.out.println("Invalid Input, Amount can't be negative");       //validation
+                        System.out.println("Invalid Input, Amount can't be negative");       
                         return;
                         }
                        
@@ -304,7 +304,7 @@ public class Bank {
         }
 
         String accountnumber=readAccountNum("Enter Account Number :");
-        ValidationUtil result=ValidationUtil.ValidationLogic(accountnumber);    //Validation1
+        ValidationUtil result=ValidationUtil.ValidationLogic(accountnumber);   
         if(!result.isValid()){  // Runs when validation fail
             System.out.println(result.getMessage());
             return;
